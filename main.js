@@ -34,7 +34,7 @@ app.options("*",(req,res) => {
 
 app.post("/auth",(req,res) => {
     res
-        .cookie('foo','bar',{ expires: new Date(Date.now() + 900000))
+        .cookie('foo','bar',{ expires: new Date(Date.now() + 900000)})
         .status(200)
         .end();
 });
