@@ -36,6 +36,7 @@ app.options("*",(req,res) => {
 app.post("/auth",(req,res) => {
     res
         .header('foo','bar')
+        .header('Set-Cookie','foo=bar;path=/;')
         .status(200)
         .end();
 });
