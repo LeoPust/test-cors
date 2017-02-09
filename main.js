@@ -16,7 +16,12 @@ app
     .use("/css", express.static("css"))
     .use("/templates", express.static("templates"))
     .use("/node_modules", express.static("node_modules"))
-    .use("/fonts", express.static("fonts"));
+    .use("/fonts", express.static("fonts"))
+    .use((req,res,next) => {
+        res
+            .header("Access-Control-Allow-Origin","*");
+        next();
+    });
 
 app.options("*",(req,res) => {
     res
