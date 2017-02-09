@@ -19,7 +19,8 @@ app
     .use("/fonts", express.static("fonts"))
     .use((req,res,next) => {
         res
-            .header("Access-Control-Allow-Origin","*");
+            .header("Access-Control-Allow-Origin","*")
+            .header("Access-Control-Expose-Headers","Content-Type,Cookie,Set-Cookie");
         next();
     });
 
