@@ -35,7 +35,7 @@ app.options("*",(req,res) => {
 
 app.post("/auth",(req,res) => {
     res
-        .headers('foo','bar')
+        .header('foo','bar')
         .status(200)
         .end();
 });
